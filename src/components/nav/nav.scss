@@ -1,0 +1,25 @@
+@function rem($px) {
+  @return $px/50+rem
+}
+
+#content {
+  width: 100%;
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: rem(80);
+    font-size: rem(28);
+    line-height: rem(28);
+    border-bottom: 1px solid sandybrown;
+    border-color: rgba(1, 17, 27, .1);
+    a{
+      text-decoration: none;
+      color: rgb(77, 85, 93);
+    }
+    .c {
+      color: rgb(240, 20, 20);
+    }
+  }
+}
