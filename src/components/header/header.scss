@@ -1,0 +1,92 @@
+@function rem($px) {
+  @return $px/50+rem
+}
+
+#header {
+  height: rem(268);
+  position: relative;
+  & > img {
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+  }
+  .head {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: rem(268);
+    .header {
+      background-color: rgba(7, 17, 27, .5);
+      padding: rem(48) rem(24) rem(36) rem(48);
+      display: flex;
+      & > div {
+        height: rem(128);
+      }
+      & > div:nth-of-type(1) {
+        img {
+          width: rem(128);
+          height: rem(128);
+        }
+      }
+      & > div:nth-of-type(2) {
+        width: 100%;
+        margin-left: rem(32);
+        & > div:nth-of-type(1) {
+          img {
+            vertical-align: middle;
+            width: rem(60);
+            height: rem(36);
+          }
+          font-size: rem(32);
+          color: white;
+          font-weight: bold;
+        }
+        & > div:nth-of-type(2) {
+          font-size: rem(24);
+          font-weight: 200;
+          color: white;
+          line-height: rem(24);
+          margin-top: rem(16);
+        }
+        & > div:nth-of-type(3) {
+          img {
+            width: rem(24);
+            height: rem(24);
+            vertical-align: middle;
+          }
+          & > div:nth-of-type(1) {
+            float: left;
+            font-size: rem(20);
+            color: white;
+            margin-top: rem(20);
+            font-weight: 200;
+          }
+          & > div:nth-of-type(2) {
+            float: right;
+            font-size: rem(20);
+            border-radius: rem(30);
+            color: white;
+            line-height: rem(24);
+            font-weight: 200;
+            background-color: rgba(0, 0, 0, .2);
+            padding: rem(14) rem(26);
+          }
+        }
+      }
+    }
+    .footer {
+      padding: rem(0) rem(24);
+      background-color: rgba(7, 17, 27, .7);
+      font-size: rem(20);
+      line-height: rem(56);
+      color: white;
+      img {
+        margin-right: rem(8);
+        height: rem(24);
+        width: rem(44);
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
